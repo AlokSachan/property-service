@@ -59,7 +59,7 @@ public class PropertyController {
         return new ResponseEntity<>(propertyService.getPropertyDetailsByType(type), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/type/{price}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/price/{price}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<PropertyEntity>> getPropertyDetailsByPrice(@PathVariable Double price) {
         return new ResponseEntity<>(propertyService.getPropertyDetailsByPrice(price), HttpStatus.OK);
     }
